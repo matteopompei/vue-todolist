@@ -23,11 +23,13 @@ let app = new Vue ({
       this.todolist.splice(index, 1);
     },
     addTask: function() {
-      this.todolist.push({
-        text: this.inputValue,
-        done: false
-      });
-      this.inputValue = "";
+      if (this.inputValue != "") {
+        this.todolist.push({
+          text: this.inputValue,
+          done: false
+        });
+        this.inputValue = "";
+      }
     }
   }
 })
