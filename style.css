@@ -8,6 +8,7 @@ body {
   background: hsl(0, 0%, 100%);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #525252;
+  cursor: default;
 }
 
 #app {
@@ -37,6 +38,77 @@ header {
 
 main {
   height: calc(100% - 127px);
-  background: hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 90%);
   box-shadow: inset 0 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+#list {
+  overflow-y: auto;
+  height: calc(100% - 159px);
+  padding: 50px 25px;
+  font-size: 1.3rem;
+  color: hsl(0, 0%, 40%);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#list ul {
+  list-style: none;
+}
+
+#list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 25px 30px;
+  background: hsl(0, 0%, 95%);
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), inset 0 0 5px rgba(0, 0, 0, 0);
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+#list li:active {
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0), inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#list li i {
+  font-size: 2rem;
+}
+
+#list li i:hover {
+  color: #ee3a3a;
+}
+
+#add-todo {
+  padding: 30px 25px;
+  background: hsl(0, 0%, 95%);
+  text-align: center;
+}
+
+#add-todo input {
+  margin: 15px;
+  padding: 15px 30px;
+  border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+#add-todo input[type="text"] {
+  background: #fff;
+  border-radius: 30px;
+  color: hsl(0, 0%, 0%);
+}
+
+#add-todo input[type="text"]::placeholder {
+  color: hsl(0, 0%, 70%);
+}
+
+#add-todo input[type="submit"] {
+  background: #c330fd;
+  border-radius: 30px;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0 1px 0 #000;
 }

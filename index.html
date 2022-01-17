@@ -4,24 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TODO List</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">
+
     <header>
       <div id="logo">To do list</div>
     </header>
+
     <main>
-      <div>
+      <div id="list">
         <ul>
-          <li>CIAO</li>
-          <li>CIAO</li>
-          <li>CIAO</li>
-          <li>CIAO</li>
-          <li>CIAO</li>
-          <li>CIAO</li>
+          <li><span>Comprare antidepressivi</span> <i class="fas fa-times"></i></li>
+          <li><span>Segnalare Massaro alle autorità</span> <i class="fas fa-times"></i></li>
+          <li><span>Portare a spasso il cane</span> <i class="fas fa-times"></i></li>
         </ul>
+      </div>
+
+      <div id="add-todo">
+        <input type="text" placeholder="Aggiungi una cosa da fare" id="new-todo">
+        <input type="submit" value="Invia" id="todo-submit">
       </div>
     </main>
 
