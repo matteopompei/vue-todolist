@@ -107,8 +107,15 @@ main {
 }
 
 #add-todo input[type="submit"] {
-  background: #c330fd;
+  background: hsl(283, 98%, 59%);
   border-radius: 30px;
   color: hsl(0, 0%, 100%);
   text-shadow: 0 1px 0 #000;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+#add-todo input[type="submit"]:hover {
+  background: hsl(283, 98%, 69%);
+
 }
