@@ -24,12 +24,15 @@ let app = new Vue ({
         return "";
       }
     },
-    done: function(index) {
+    taskDone: function(index) {
       if (this.todolist[index].done == true) {
         this.todolist[index].done = false;
       } else {
         this.todolist[index].done = true;
       }
+    },
+    taskDelete: function(index) {
+      this.todolist.splice(index, 1);
     }
   }
 })

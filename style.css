@@ -79,6 +79,7 @@ main {
 
 #list li i {
   font-size: 2rem;
+  color: hsl(0, 0%, 10%);
 }
 
 #list li i:hover {
