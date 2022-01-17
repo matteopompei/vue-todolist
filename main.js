@@ -15,6 +15,7 @@ let app = new Vue ({
         done: false
       }
     ],
+    inputValue: ""
   },
   methods: {
     checkDone: function(index) {
@@ -33,6 +34,12 @@ let app = new Vue ({
     },
     taskDelete: function(index) {
       this.todolist.splice(index, 1);
+    },
+    addTask: function() {
+      this.todolist.push({
+        text: this.inputValue,
+        done: false
+      })
     }
   }
 })

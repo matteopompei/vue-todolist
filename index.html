@@ -26,8 +26,8 @@
       </div>
 
       <div id="add-todo">
-        <input type="text" placeholder="Aggiungi una cosa da fare" id="new-todo">
-        <input type="submit" value="Invia">
+        <input type="text" placeholder="Aggiungi una cosa da fare" v-model="inputValue" @keyup.enter="addTask()">
+        <input type="submit" value="Invia" @click="addTask()">
       </div>
     </main>
 
