@@ -18,7 +18,7 @@
     <main>
       <div id="list">
         <ul>
-          <li v-for="(elemento, index) in todolist" :class="checkDone(index)" @click="done(index)"><span>{{todolist[index].text}}</span> <i class="fas fa-times"></i></li>
+          <li v-for="(elemento, index) in todolist" @click="done(index)"><span :class="checkDone(index)">{{todolist[index].text}}</span> <i class="fas fa-times"></i></li>
         </ul>
       </div>
 
