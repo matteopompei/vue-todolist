@@ -26,7 +26,8 @@ let app = new Vue ({
       this.todolist.push({
         text: this.inputValue,
         done: false
-      })
+      });
+      this.inputValue = "";
     }
   }
 })
