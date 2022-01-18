@@ -13,17 +13,19 @@ let app = new Vue ({
       }
     },
     taskDone: function(index) {
-      if (this.todolist[index].done == true) {
-        this.todolist[index].done = false;
-      } else {
-        this.todolist[index].done = true;
-      }
+      // if (this.todolist[index].done == true) {
+      //   this.todolist[index].done = false;
+      // } else {
+      //   this.todolist[index].done = true;
+      // }
+      this.todolist[index].done = !this.todolist[index].done;
     },
     taskDelete: function(index) {
       this.todolist.splice(index, 1);
     },
     addTask: function() {
-      if (this.inputValue != "") {
+      let checkSpace = this.inputValue.replace(/ /g, "");
+      if (checkSpace != "") {
         this.todolist.push({
           text: this.inputValue,
           done: false
